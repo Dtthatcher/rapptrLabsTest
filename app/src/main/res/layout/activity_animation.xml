@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/animation_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="?attr/actionBarSize"
+        tools:context="com.datechnologies.androidtest.animation.AnimationActivity">
+
+        <ImageView
+            android:id="@+id/yellow"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0"
+            android:background="@drawable/red_block"
+            android:backgroundTint="#FFFF00"
+            android:layout_margin="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guidelineVerticalMiddle"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineMiddle" />
+
+        <ImageView
+            android:id="@+id/green"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0"
+            android:background="@drawable/red_block"
+            android:backgroundTint="@color/green_box"
+            android:layout_margin="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineBottom"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalMiddle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/guidelineMiddle" />
+
+        <ImageView
+            android:id="@+id/red"
+            android:visibility="invisible"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0"
+            android:background="@drawable/red_block"
+            android:layout_margin="20dp"
+            android:tag="0"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineMiddle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guidelineVerticalMiddle"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
+
+        <ImageView
+            android:id="@+id/blue"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:alpha="0"
+            android:background="@drawable/red_block"
+            android:backgroundTint="@color/button_blue"
+            android:layout_margin="20dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineMiddle"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineVerticalMiddle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTop" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="23dp"
+            android:layout_marginEnd="22dp"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/gpc_logo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/Blue_Button_Text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/ripple_blue_button"
+            android:text="@string/fade_out"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:visibility="visible" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintGuide_percent=".9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintGuide_percent=".1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineVerticalMiddle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".5" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/gameStart"
+            android:layout_height="0dp"
+            android:layout_width="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/yellow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/blue">
+
+            <TextView
+                android:id="@+id/gameStartTextBox"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/game_start"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textAllCaps="true"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

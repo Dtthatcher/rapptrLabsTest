@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AndroidTest</string>
+
+    <!-- Main Screen Strings -->
+    <string name="activity_main_title">Coding Tasks</string>
+    <string name="chat_button">CHAT</string>
+    <string name="login_button">LOGIN</string>
+    <string name="login_title">Login</string>
+    <string name="animation_button">ANIMATION</string>
+    <string name="password_editText_hint">Password</string>
+    <string name="email_editText_hint">Email</string>
+    <string name="fade_in">FADE IN</string>
+    <string name="fade_out">FADE OUT</string>
+    <string name="game_start">Drag Logo Here!!</string>
+
+</resources>
