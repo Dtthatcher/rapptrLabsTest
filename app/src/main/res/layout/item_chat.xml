@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        app:shapeAppearanceOverlay="@style/roundImageView"/>
+        app:shapeAppearanceOverlay="@style/roundImageView" />
 
     <TextView
         android:id="@+id/bubble"
@@ -30,8 +30,8 @@
         android:background="@drawable/chat_bubble"
         android:padding="8dp"
         android:text="Message"
-        android:textSize="15sp"
         android:textColor="@color/chat_text"
+        android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/avatarImageView"
         app:layout_constraintTop_toTopOf="@id/guideline" />
