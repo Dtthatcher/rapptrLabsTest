@@ -15,8 +15,11 @@ import kotlinx.android.synthetic.main.item_chat.view.*
  * A recycler view adapter used to display chat log messages in [ChatActivity].
  *
  */
-class ChatAdapter(private val chatResponse: List<ChatMessage>) : RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {
-
+class ChatAdapter : RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {
+    private val chatList = mutableListOf<ChatMessage>()
+    fun setList(chats: List<ChatMessage>){
+        chatList.addAll(chats)
+    }
     //==============================================================================================
     // ChatViewHolder Class
     //==============================================================================================
@@ -42,10 +45,9 @@ class ChatAdapter(private val chatResponse: List<ChatMessage>) : RecyclerView.Ad
     }
 
     override fun onBindViewHolder(viewHolder: ChatViewHolder, position: Int) {
-        viewHolder.bindView(chatMessage = chatResponse.get(position))
-
+        viewHolder.bindView(chatList[position])
     }
 
-    override fun getItemCount(): Int = chatResponse.size
+    override fun getItemCount(): Int = chatList.size
 
 }

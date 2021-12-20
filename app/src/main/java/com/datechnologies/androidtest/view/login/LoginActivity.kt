@@ -77,7 +77,6 @@ class LoginActivity : AppCompatActivity() {
                 if (response.code == 200) showAlertDialog(response, startTime)
                 else Toast.makeText(this@LoginActivity, "Wrong Email or Password", Toast.LENGTH_SHORT).show()
             }
-
         }
     }
 
